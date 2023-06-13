@@ -1,0 +1,395 @@
+/* main css */
+body {
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  background-attachment: fixed;
+  background: linear-gradient(to left top, #576299, #ffc9c9);
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  zoom: 100%;
+}
+
+.main,
+.innermain {
+  position: relative;
+  border-radius: 103px;
+}
+
+.main {
+  transform: rotate(45deg);
+  width: 202px;
+  height: 203px;
+}
+
+
+/* Main1 css */
+.main1 {
+  display: flex;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  border-top-left-radius: 103px;
+  border-top-right-radius: 103px;
+}
+
+.main1 .div1,
+.div2 {
+  height: 100px;
+  width: 100px;
+}
+
+.main1 .div1 {
+  border-top-left-radius: 100%;
+  position: relative;
+}
+
+.main1 .div2 {
+  border-top-right-radius: 100%;
+  position: relative;
+}
+
+/* main2 css */
+.main2 {
+  display: flex;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+
+  border-bottom-left-radius: 103px;
+  border-bottom-right-radius: 103px;
+}
+
+.main2 .div3,
+.div4 {
+  height: 100px;
+  width: 100px;
+}
+
+.main2 .div3 {
+  border-bottom-left-radius: 100%;
+  position: relative;
+}
+
+.main2 .div4 {
+  border-bottom-right-radius: 100%;
+}
+
+/* ----------------------------------------------------------- */
+/* inner main css */
+.innermain {
+  width: 120px;
+  height: 120px;
+  transform: rotate(45deg);
+  left: -159px;
+  top: -1px;
+}
+
+/* Main3 css */
+.main3 {
+  display: flex;
+  width: 120px;
+  height: 60px;
+  overflow: hidden;
+  float: left;
+
+  border-top-left-radius: 103px;
+  border-top-right-radius: 103px;
+}
+
+.main3 .div5,
+.div6 {
+  height: 64px;
+  width: 60px;
+  display: flex;
+}
+
+.main3 .div5 {
+  border-top-left-radius: 100%;
+  position: relative;
+}
+
+.main3 .div6 {
+  border-top-right-radius: 100%;
+  position: relative;
+}
+
+/* main4 css */
+.main4 {
+  display: flex;
+  width: 120px;
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+
+  border-bottom-left-radius: 103px;
+  border-bottom-right-radius: 103px;
+}
+
+.main4 .div7,
+.div8 {
+  height: 60px;
+  width: 60px;
+}
+
+.main4 .div7 {
+  border-bottom-left-radius: 100%;
+  position: relative;
+}
+
+.main4 .div8 {
+  border-bottom-right-radius: 100%;
+}
+
+#display {
+  position: fixed;
+  height: 30px;
+  font-size: 24px;
+  width: 150px;
+  align-items: center;
+  margin-top: 320px;
+  margin-left: 10px;
+}
+
+#alert {
+  position: fixed;
+  height: 15px;
+  width: 15px;
+  top: 4%;
+  left: 17px;
+}
+
+#alertmessage{
+  position: fixed;
+  top: 3.5%;
+  left: 47px;
+  font-size: 20px;
+}
+
+#reset {
+  position: relative;
+  top: -146px;
+  right: -179px;
+  z-index: 10;
+  height: 19px;
+  width: 147px;
+  border: 2px solid red;
+  background-color: lightgrey;
+  font-size: 24px;
+  padding-bottom: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  color: darkslategrey;
+  word-wrap: wrap;
+}
+
+
+/* ---------------------------------------------------*/
+/* car css */
+
+
+.car {
+  position: relative;
+  top: 0px;
+  left: -402px;
+  justify-content: center;
+  border-radius: 23px;
+  height: 94px;
+  zoom: 59%;
+}
+
+.c1 {
+  justify-content: center;
+  height: 90px;
+  width: 50px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: black;
+}
+
+.c2 {
+  height: 70px;
+  width: 30px;
+  justify-content: center;
+  border: 2px solid white;
+  margin: 15%;
+  border-radius: 12px;
+  background-color: black;
+}
+
+.c3 {
+  height: 39px;
+  width: 10px;
+  margin: 36%;
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid white;
+  background-color: black;
+  position: relative;
+  bottom: -2px;
+  left: -2px;
+}
+
+.hr1 {
+  left: -6px;
+  width: 15px;
+  height: 3px;
+  background-color: black;
+  position: relative;
+  top: -70px;
+  justify-content: center;
+  transform: rotate(-45deg);
+}
+
+.hr2 {
+  left: 44px;
+  width: 15px;
+  height: 3px;
+  justify-content: center;
+  background-color: black;
+  position: relative;
+  top: -73px;
+  transform: rotate(45deg);
+}
+
+.hr3 {
+  left: 10px;
+  width: 15px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+  top: -80px;
+  transform: rotate(45deg);
+  justify-content: center;
+}
+
+.hr4 {
+  left: 29px;
+  width: 16px;
+  height: 2px;
+  justify-content: center;
+  background-color: white;
+  position: relative;
+  top: -34px;
+  transform: rotate(45deg);
+}
+
+.hr5 {
+  left: 9px;
+  justify-content: center;
+  width: 16px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+  top: -36px;
+  transform: rotate(-45deg);
+}
+
+.hr6 {
+  left: 29px;
+  width: 15px;
+  height: 2px;
+  justify-content: center;
+  background-color: white;
+  position: relative;
+  top: -84px;
+  transform: rotate(-45deg);
+}
+
+.hr7 {
+  justify-content: center;
+  left: 32px;
+  width: 10px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+  top: -63px;
+}
+
+.hr8 {
+  left: 11px;
+  width: 9px;
+  height: 2px;
+  background-color: white;
+  justify-content: center;
+  position: relative;
+  top: -64px;
+}
+
+.hr9 {
+  left: 8px;
+  justify-content: center;
+  width: 5px;
+  height: 3px;
+  background-color: red;
+  position: relative;
+  top: -29px;
+  border-radius: 20px;
+}
+
+.hr10 {
+  left: 40px;
+  width: 5px;
+  height: 3px;
+  justify-content: center;
+  background-color: red;
+  position: relative;
+  top: -32px;
+  border-radius: 20px;
+}
+
+.hr11 {
+  justify-content: center;
+  left: 40px;
+  width: 5px;
+  height: 3px;
+  background-color: white;
+  position: relative;
+  top: -109px;
+  border-radius: 20px;
+}
+
+.hr12 {
+  left: 7px;
+  width: 5px;
+  justify-content: center;
+  height: 3px;
+  background-color: white;
+  position: relative;
+  top: -111px;
+  border-radius: 20px;
+}
+
+/*media queries*/
+@media only screen and (max-height: 400px) {
+  body {
+    zoom: 88%;
+    left: 3%;
+    position: relative;
+    padding-top: 4%;
+  }
+}
+
+@media only screen and ((max-height: 400px) and (max-width:400px)) {
+  body {
+    zoom: 90%;
+    position: relative;
+    left: 3%;
+    padding-top: 7%;
+  }
+}
+
+@media only screen and ((max-height: 380px) and (max-width:280px)) {
+  body {
+    zoom: 86%;
+    position: relative;
+    left: 3%;
+    padding-top: 13%;
+  }
+}

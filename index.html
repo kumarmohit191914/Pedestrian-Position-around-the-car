@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Project Web</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="bo">
+    <div id="alert" style="float: left;background-color: red;"></div>
+    <div id="alertmessage">Not Connected.</div>
+    <a>
+        <div id="reset"
+            onclick="document.getElementById('alert').style.backgroundColor='red';document.getElementById('display').innerHTML='';document.getElementById('alertmessage').innerHTML='Not Connected.'">
+            Reset Button</div>
+    </a>
+
+    <div class="main">
+        <div class="main1">
+            <a onclick="commonFunc(this)" id="v2c front 25cm">
+                <div class="div1" style="background-color:lightgray;cursor:pointer;"></div>
+            </a>
+            <a onclick="commonFunc(this)" id="v2c right 25cm">
+                <div class="div2" style="background-color: lightgray;cursor:pointer;"></div>
+            </a>
+        </div>
+
+        <div class="main2">
+            <a onclick="commonFunc(this)" id="v2c left 25cm">
+                <div class="div3" style="background-color: lightgray;cursor:pointer;"></div>
+            </a>
+            <a onclick="commonFunc(this)" id="v2c back 25cm">
+                <div class="div4" style="background-color: lightgray;cursor:pointer;"></div>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="innermain">
+
+        <div class="main3">
+            <a onclick="commonFunc(this)" id="v2c front 15cm">
+                <div class="div5" style="background-color: lightblue;cursor:pointer;"></div>
+            </a>
+            <a onclick="commonFunc(this)" id="v2c right 15cm">
+                <div class="div6" style="background-color: lightblue;cursor:pointer;"></div>
+            </a>
+        </div>
+
+        <div class="main4">
+            <a onclick="commonFunc(this)" id="v2c left 15cm">
+                <div class="div7" style="background-color: lightblue;cursor:pointer;"></div>
+            </a>
+            <a onclick="commonFunc(this)" id="v2c back 15cm">
+                <div class="div8" style="background-color: lightblue;cursor:pointer;"></div>
+            </a>
+        </div>
+
+
+    </div>
+    <div id="display"></div>
+
+    <div class="car">
+        <div class="c1">
+            <div class="c2">
+                <div class="c3">
+
+                </div>
+            </div>
+        </div>
+        <div class="hr1"></div>
+        <div class="hr2"></div>
+        <div class="hr3"></div>
+        <div class="hr4"></div>
+        <div class="hr5"></div>
+        <div class="hr6"></div>
+        <div class="hr7"></div>
+        <div class="hr8"></div>
+        <div class="hr9"></div>
+        <div class="hr10"></div>
+        <div class="hr11"></div>
+        <div class="hr12"></div>
+    </div>
+
+    <!-- <script>
+
+        
+
+
+        function commonFunc(elem) {
+            var data = {
+                data: String(elem.id),
+            }
+            $.ajax({
+                type: "POST",
+                url: "http://127.0.0.1:5000/",
+                dataType: "json",
+                data: JSON.stringify(data),
+                contentType: "application/json; charset=utf-8",
+                success: function (response) {
+
+                    $('#alert').css('background-color', 'green');
+                    var populate = document.getElementById("display")
+                    populate.innerText = elem.id;
+
+                    var alerttext = document.getElementById("alertmessage")
+                    alerttext.innerText = "Connected."
+
+                },
+                error: function (xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
+        }
+    </script> -->
+
+
+    <script>
+
+        const ws = new WebSocket("ws://localhost:5000");
+        ws.onopen = () => {
+            document.getElementById("alert").style.backgroundColor = "green";
+            document.getElementById("alertmessage").innerHTML = 'Connected.';
+        };
+
+
+        function commonFunc(elem) {
+            var data = {
+                data: String(elem.id),
+            }
+
+            const ws = new WebSocket("ws://localhost:5000");
+            ws.addEventListener("open", e => {
+                document.getElementById('alert').style.backgroundColor = 'green';
+                document.getElementById('alertmessage').innerHTML = 'Connected.';
+
+                document.getElementById('display').innerHTML = String(elem.id);
+                ws.send(JSON.stringify({
+                    "Clicked On": elem.id
+                }));
+            });
+        };
+
+        ws.onclose = () => {
+            document.getElementById("alert").style.backgroundColor = "red";
+            document.getElementById("alertmessage").innerHTML = 'Not Connected.';
+        };
+
+    </script>
+</body>
+
+</html>
